@@ -12,7 +12,7 @@ import dotenv from "dotenv";
 
 const app = express();
 dotenv.config();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 const mongouri=process.env.MONGO_URI;
 const secret=process.env.JWT_SECRET;
 
