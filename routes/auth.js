@@ -236,7 +236,7 @@ router.post("/login", async (req, res) => {
     const token = jwt.sign(
       { userId: user._id, email: user.email ,name:user.name,isGuest:user.isGuest},
       JWT_SECRET,
-      { expiresIn: "1h" }
+      { expiresIn: "24h" }
     );
 
     //console.log("Generated token:", token);
@@ -271,7 +271,7 @@ router.get(
     };
 
     const token = jwt.sign(payload,JWT_SECRET, {
-      expiresIn: "1h",
+      expiresIn: "24h",
     });
 
     
@@ -300,7 +300,7 @@ router.post("/guest", async (req, res) => {
         isGuest: true,
       },
       JWT_SECRET,
-      { expiresIn: "1h" }
+      { expiresIn: "24h" }
     );
     console.log(jwtDecode(token));
 
