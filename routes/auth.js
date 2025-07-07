@@ -275,7 +275,7 @@ router.get(
     });
 
     
-    res.redirect(`http://localhost:3000/oauth-redirect?token=${token}`);
+    res.redirect(`https://quizapp-frontend1.onrender.com/oauth-redirect?token=${token}`);
   }
 );
 
