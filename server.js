@@ -16,9 +16,13 @@ const PORT = process.env.PORT;
 const mongouri=process.env.MONGO_URI;
 const secret=process.env.JWT_SECRET;
 
+const allowedOrigins = [
+  "https://quizapp-frontend1.onrender.com", 
+  "http://localhost:3000"               
+];
 
 app.use(cors({
-  origin: "http://localhost:3000", // your React app origin
+  origin:allowedOrigins, // your React app origin
   credentials: true,
 }));
 app.use(express.json());
