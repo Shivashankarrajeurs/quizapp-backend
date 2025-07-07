@@ -13,7 +13,7 @@ passport.use(
     {
       clientID:cl_id,
       clientSecret:cl_secret,
-      callbackURL: "http://localhost:5000/api/auth/google/callback",
+      callbackURL: "https://quizapp-backend-v6zw.onrender.com/api/auth/google/callback",
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
